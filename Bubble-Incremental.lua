@@ -28,7 +28,7 @@ Instance.new("UICorner", MainButton).CornerRadius = UDim.new(0, 10)
 
 CloseButton.Parent = Frame
 CloseButton.Size = UDim2.new(0, 26, 0, 26)
-CloseButton.Position = UDim2.new(1, -34, 0, 8)  -- Tam köşede, üstüne binmez
+CloseButton.Position = UDim2.new(1, -34, 0, 8)
 CloseButton.BackgroundColor3 = Color3.fromRGB(255, 60, 60)
 CloseButton.Text = "X"
 CloseButton.TextColor3 = Color3.new(1,1,1)
@@ -47,7 +47,7 @@ MainButton.MouseButton1Click:Connect(function()
     
     if running then
         spawn(function()
-            while running and wait(0.4) do
+            while running and wait(0) do
                 local char = game.Players.LocalPlayer.Character
                 if char and char:FindFirstChild("HumanoidRootPart") then
                     local bubbles = workspace.Bubbles:GetChildren()
